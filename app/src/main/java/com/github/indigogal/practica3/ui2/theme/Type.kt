@@ -1,5 +1,6 @@
 package com.github.indigogal.practica3.ui2.theme
 
+import com.github.indigogal.practica3.R
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily

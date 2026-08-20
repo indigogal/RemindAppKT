@@ -38,6 +38,7 @@ android {
 dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.12.0")
+    implementation(libs.androidx.compose.foundation.layout)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
