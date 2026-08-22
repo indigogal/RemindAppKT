@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme() {
                 Box(
-                    modifier = Modifier.fillMaxSize(),
+          modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ){
                     ReminderCard()
