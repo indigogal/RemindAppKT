@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
                                 .padding(innerPadding),
                             contentAlignment = Alignment.Center
                         ){
-                            ReminderCard()
+                            Recordatorios()
                         }
                     }
                 }
@@ -64,7 +64,7 @@ fun RecordPreview(){
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
             ){
-                ReminderCard()
+                Recordatorios()
             }
         }
 

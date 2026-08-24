@@ -25,7 +25,7 @@ class AlarmReceiver : BroadcastReceiver() {
         //Usa el Builder para ser compatibles con versiones antiguas
         val notification = NotificationCompat.Builder(context, chanId)
             //Pone el icono de la app en la notificación
-            //.setSmallIcon(android.R.drawable.icon)
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
             //Pone titulo
             .setContentTitle("Recordatorio")
             //Contenido de la notificación
@@ -38,6 +38,5 @@ class AlarmReceiver : BroadcastReceiver() {
             .build()
         //Envía la notificación
         notificationManager.notify(1, notification)
-
     }
 }
