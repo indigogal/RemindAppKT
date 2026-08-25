@@ -10,7 +10,7 @@ import androidx.room3.Query
 
 @Entity(tableName = "reminders")
 data class Reminder(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name="title") val title: String,
     @ColumnInfo(name="content") val content: String,
     @ColumnInfo(name="expiresAt") val expiresAt: Int
