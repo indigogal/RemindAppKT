@@ -1,4 +1,4 @@
-package com.github.indigogal.practica3
+package com.github.indigogal.practica3.Notifications
 
 import android.app.AlarmManager
 import android.app.PendingIntent

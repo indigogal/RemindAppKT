@@ -1,5 +1,6 @@
-package com.github.indigogal.practica3
+package com.github.indigogal.practica3.Notifications
 
+import android.R
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.BroadcastReceiver
@@ -18,14 +19,15 @@ class AlarmReceiver : BroadcastReceiver() {
         //Comprueba que el dispositivo tiene Android 8 o superior para permitir la ejecución
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             //Crea el Objeto NotificationChannel con id, nombre e importancia alta, para mostrar un pop-up y que tenga sonido
-            val canal = NotificationChannel(chanId, "Recordatorio", NotificationManager.IMPORTANCE_HIGH)
+            val canal =
+                NotificationChannel(chanId, "Recordatorio", NotificationManager.IMPORTANCE_HIGH)
             //Registra el canal para el sistema
             notificationManager.createNotificationChannel(canal)
         }
         //Usa el Builder para ser compatibles con versiones antiguas
         val notification = NotificationCompat.Builder(context, chanId)
             //Pone el icono de la app en la notificación
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.ic_dialog_info)
             //Pone titulo
             .setContentTitle("Recordatorio")
             //Contenido de la notificación

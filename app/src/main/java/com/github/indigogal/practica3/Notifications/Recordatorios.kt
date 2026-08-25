@@ -1,7 +1,8 @@
-package com.github.indigogal.practica3
+package com.github.indigogal.practica3.Notifications
 
 import android.app.TimePickerDialog
 import android.Manifest
+import android.content.Context
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -102,7 +103,7 @@ fun Recordatorios(
 }
 
 // Función auxiliar privada para calcular y programar una notificación en N segundos
-private fun scheduleTestNotification(context: android.content.Context, delayInSeconds: Int) {
+private fun scheduleTestNotification(context: Context, delayInSeconds: Int) {
     // Suma los segundos indicados a la hora actual del reloj
     val calendar = Calendar.getInstance().apply {
         add(Calendar.SECOND, delayInSeconds)
