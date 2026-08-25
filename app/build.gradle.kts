@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.20"
+    id("com.google.devtools.ksp") version "2.3.10"
 }
 
 android {
@@ -36,6 +38,11 @@ android {
 }
 
 dependencies {
+    val room_version = "3.0.1"
+
+    implementation("androidx.room3:room3-runtime:$room_version")
+    ksp("androidx.room3:room3-compiler:$room_version")
+
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.12.0")
     implementation(libs.androidx.compose.foundation.layout)
