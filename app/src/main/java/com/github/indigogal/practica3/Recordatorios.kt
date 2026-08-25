@@ -22,7 +22,7 @@ fun Recordatorios(
     val context = LocalContext.current
 
     // Estado para actualizar el texto descriptivo de la hora seleccionada en la UI
-    var selectedTimeText by remember { mutableStateOf("No hay hora seleccionada") }
+    var selectedTimeText by remember { mutableStateOf("Pon un recordatorio importante") }
 
     // Registra el manejador de permisos para solicitar POST_NOTIFICATIONS en tiempo de ejecución
     val permissionLauncher = rememberLauncherForActivityResult(
